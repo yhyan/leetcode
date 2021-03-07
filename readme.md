@@ -8,5 +8,7 @@
 
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
+- 5分钟算法
 
+- [LeetCodeAnimation](https://github.com/MisterBooo/LeetCodeAnimation)
 
