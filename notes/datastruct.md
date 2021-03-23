@@ -226,3 +226,11 @@ void quick_sort(int arr[], int left, int right)
 
 ```
 
+# 动态规划
+
+#### [字符串匹配 正则表达式匹配](https://www.nowcoder.com/practice/43072d50a6eb44d2a6c816a283b02036)
+
+dp[i][j] ——表示 s 的前 i 个字符和 p 的前 j 个是否匹配；
+
+
+
