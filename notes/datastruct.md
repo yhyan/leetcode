@@ -50,6 +50,11 @@ A[1], A[2], A[3], ... , A[N] 就是一个大小为N的表。
 
 40000名学生和2500门课程。列出每个班的注册者；列出每个学生注册的班级。用二维链表存储信息。
 
+###  无序单链表排序
+
+拆分成两个链表，然后归并排序
+
+也可以冒泡排序，但是时间复杂度太高。
 
 
 # 栈
@@ -212,6 +217,10 @@ void quick_sort(int arr[], int left, int right)
 
 ```
 
+#### 经典问题
+
+- O(n)算法得到数组中任意第k大的数字：利用快速排序的思想，一次快排后看位于k的左边还是右边再递归。
+
 # 不相交集ADT
 
 # 图论
@@ -219,9 +228,161 @@ void quick_sort(int arr[], int left, int right)
 - 拓扑排序
 - 最短路径
 
-# 深度优先搜索
+# BFS
+
+基本实现思想
+
+1. 顶点v入队列。
+2. 当队列非空时则继续执行，否则算法结束。
+3. 出队列取得队头顶点v；
+4. 查找顶点v的所以子节点，并依次进入队列；
+5. 转到步骤（2）。
 
 ```
+def bfs(root):
+  q = []
+  q.append(root)
+  while not q.empty():
+      node = q.pop()
+      for i in node.children:
+          q.append(i)
+
+```
+
+# DFS
+
+基本思想：　
+
+递归实现：
+
+1. 访问顶点v，打印节点；
+2. 遍历v的子节点w，while（w存在），递归执行该节点；
+
+```
+　　void dfs(root)
+　　{
+    　　visited[root] = true;
+    　　for each w adjacent to v
+       　　 if (!visited[w])
+            　　dfs(w);
+　　}
+```
+
+#### [二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths/)
+
+非递归实现：
+
+```
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+
+import "fmt"
+import "strconv"
+import "strings"
+
+type Stack struct {
+    items []*TreeNode
+    top int
+}
+
+func (s *Stack) IsEmpty() bool {
+    if s.top <= 0 {
+        return true
+    }
+    return false
+}
+
+func (s *Stack) Pop() *TreeNode {
+    if s.top <= 0 {
+        return nil
+    }
+    var r = s.items[s.top-1]
+    s.top -= 1
+    return r
+}
+
+func (s *Stack) Push(e *TreeNode) *TreeNode {
+    if s.top >= len(s.items){
+        s.items = append(s.items, e)
+    }else{
+        s.items[s.top] = e
+    }
+    s.top ++
+    return s.items[s.top-1]
+}
+
+func (s *Stack) Peer() *TreeNode {
+    if s.IsEmpty(){
+        return nil
+    }
+    return s.items[s.top-1]
+}
+
+func (s *Stack) Path() string {
+    if s.IsEmpty(){
+        return ""
+    }
+    var nodes = make([]string, s.top)
+    for i:=0; i<s.top; i++{
+        if s.items[i] == nil {
+            nodes[i] = "empty"
+        }else{
+            nodes[i] = strconv.Itoa(s.items[i].Val)
+        }
+    }
+    return strings.Join(nodes, "->")
+}
+
+
+func binaryTreePaths(root *TreeNode) []string {
+    var s *Stack = new(Stack)
+    s.top = 0
+
+    var paths = make([]string, 0)
+    if root == nil {
+        return paths
+    }
+
+    s.Push(root)
+    for !s.IsEmpty() {
+        var thisNode = s.Peer()
+        // go to leaf node
+        for thisNode != nil && thisNode.Left != nil {
+            s.Push(thisNode.Left)
+            thisNode = thisNode.Left
+        }
+        // now thisNode.left is nil
+        if thisNode.Right == nil {
+            // print Path
+            paths = append(paths, s.Path())
+
+            // now go back
+            var childNode = s.Pop()
+            thisNode = s.Peer()
+            // for thisNode has no visited children, go back
+            for thisNode != nil {
+                if thisNode.Right != nil && thisNode.Right != childNode {
+                    break  // 还有为访问的节点
+                }
+                childNode = s.Pop()
+                thisNode = s.Peer()
+            }
+            // now thisNode is nil or thisNode has not visited children
+            if thisNode != nil && thisNode.Right != childNode {
+                s.Push(thisNode.Right)
+            }
+        } else {
+            s.Push(thisNode.Right)
+        }
+    }
+    return paths
+}
 
 
 ```
