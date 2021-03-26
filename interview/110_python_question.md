@@ -336,44 +336,40 @@ ORM，全拼Object-Relation Mapping，意为对象-关系映射
 ![1](110_python_question/30.png)
 
 
-40、x="abc",y="def",z=["d","e","f"],分别求出x.join(y)和x.join(z)返回的结果
+# 40、x="abc",y="def",z=["d","e","f"],分别求出x.join(y)和x.join(z)返回的结果
 
 join()括号里面的是可迭代对象，x插入可迭代对象中间，形成字符串，结果一致，有没有突然感觉字符串的常见操作都不会玩了
 
 顺便建议大家学下os.path.join()方法，拼接路径经常用到，也用到了join,和字符串操作中的join有什么区别，该问题大家可以查阅相关文档，后期会有答案
 
-![1](110_python_question/30.png)
+![1](110_python_question/31.png)
 
 
-41、举例说明异常模块中try except else finally的相关意义
+# 41、举例说明异常模块中try except else finally的相关意义
 
 try..except..else没有捕获到异常，执行else语句
 
 try..except..finally不管是否捕获到异常，都执行finally语句
 
-![1](110_python_question/31.png)
-
-
-42、python中交换两个数值
-
 ![1](110_python_question/32.png)
 
+# 42、python中交换两个数值
 
-43、举例说明zip（）函数用法
+![1](110_python_question/33.png)
+
+# 43、举例说明zip（）函数用法
 
 zip()函数在运算时，会以一个或多个序列（可迭代对象）做为参数，返回一个元组的列表。同时将这些序列中并排的元素配对。
 
 zip()参数可以接受任何类型的序列，同时也可以有两个以上的参数;当传入参数的长度不同时，zip能自动以最短序列长度为准进行截取，获得元组。
 
-![1](110_python_question/33.png)
-
-
-44、a="张明 98分"，用re.sub，将98替换为100
-
 ![1](110_python_question/34.png)
 
+# 44、a="张明 98分"，用re.sub，将98替换为100
 
-45、写5条常用sql语句
+![1](110_python_question/35.png)
+
+# 45、写5条常用sql语句
 
 show databases;
 
@@ -389,19 +385,17 @@ update students set gender=0,hometown="北京" where id=5
 
 
 
-46、a="hello"和b="你好"编码成bytes类型
-
-![1](110_python_question/35.png)
-
-
-47、[1,2,3]+[4,5,6]的结果是多少？
-
-两个列表相加，等价于extend
+# 46、a="hello"和b="你好"编码成bytes类型
 
 ![1](110_python_question/36.png)
 
+# 47、[1,2,3]+[4,5,6]的结果是多少？
 
-48、提高python运行效率的方法
+两个列表相加，等价于extend
+
+![1](110_python_question/37.png)
+
+# 48、提高python运行效率的方法
 
 1、使用生成器，因为可以节约大量内存
 
@@ -415,7 +409,7 @@ update students set gender=0,hometown="北京" where id=5
 
 
 
-49、简述mysql和redis区别
+# 49、简述mysql和redis区别
 
 redis： 内存型非关系数据库，数据保存在内存中，速度快
 
@@ -423,7 +417,7 @@ mysql：关系型数据库，数据保存在磁盘中，检索的话，会有一
 
 
 
-50、遇到bug如何处理
+# 50、遇到bug如何处理
 
 1、细节上的错误，通过print（）打印，能执行到print（）说明一般上面的代码没有问题，分段检测程序是否有问题，如果是js的话可以alert或console.log
 
@@ -435,37 +429,33 @@ mysql：关系型数据库，数据保存在磁盘中，检索的话，会有一
 
 
 
-51、正则匹配，匹配日期2018-03-20
+# 51、正则匹配，匹配日期2018-03-20
 
 url='https://sycm.taobao.com/bda/tradinganaly/overview/get_summary.json?dateRange=2018-03-20%7C2018-03-20&dateType=recent1&device=1&token=ff25b109b&_=1521595613462'
 
 仍有同学问正则，其实匹配并不难，提取一段特征语句，用（.*?）匹配即可
 
-![1](110_python_question/37.png)
+![1](110_python_question/38.png)
 
-
-52、list=[2,3,5,4,9,6]，从小到大排序，不许用sort，输出[2,3,4,5,6,9]
+# 52、list=[2,3,5,4,9,6]，从小到大排序，不许用sort，输出[2,3,4,5,6,9]
 
 利用min()方法求出最小值，原列表删除最小值，新列表加入最小值，递归调用获取最小值的函数，反复操作
 
-![1](110_python_question/38.png)
+![1](110_python_question/39.png)
 
-
-53、写一个单列模式
+# 53、写一个单列模式
 
 因为创建对象时__new__方法执行，并且必须return 返回实例化出来的对象所cls.__instance是否存在，不存在的话就创建对象，存在的话就返回该对象，来保证只有一个实例对象存在（单列），打印ID，值一样，说明对象同一个
 
-![1](110_python_question/39.png)
+![1](110_python_question/40.png)
 
-
-54、保留两位小数
+# 54、保留两位小数
 
 题目本身只有a="%.03f"%1.3335,让计算a的结果，为了扩充保留小数的思路，提供round方法（数值，保留位数）
 
-![1](110_python_question/40.png)
+![1](110_python_question/41.png)
 
-
-55、求三个方法打印结果
+# 55、求三个方法打印结果
 
 fn("one",1）直接将键值对传给字典；
 
@@ -473,10 +463,9 @@ fn("two",2)因为字典在内存中是可变数据类型，所以指向同一个
 
 fn("three",3,{})因为传了一个新字典，所以不再是原先默认参数的字典
 
-![1](110_python_question/41.png)
+![1](110_python_question/42.png)
 
-
-56、列出常见的状态码和意义
+# 56、列出常见的状态码和意义
 
 200 OK 
 
@@ -536,7 +525,7 @@ GET范围请求已成功处理
 
 
 
-57、分别从前端、后端、数据库阐述web项目的性能优化
+# 57、分别从前端、后端、数据库阐述web项目的性能优化
 
 该题目网上有很多方法，我不想截图网上的长串文字，看的头疼，按我自己的理解说几点
 
@@ -566,12 +555,11 @@ GET范围请求已成功处理
 
 
 
-58、使用pop和del删除字典中的"name"字段，dic={"name":"zs","age":18}
+# 58、使用pop和del删除字典中的"name"字段，dic={"name":"zs","age":18}
 
-![1](110_python_question/42.png)
+![1](110_python_question/43.png)
 
-
-59、列出常见MYSQL数据存储引擎
+# 59、列出常见MYSQL数据存储引擎
 
 InnoDB：支持事务处理，支持外键，支持崩溃修复能力和并发控制。如果需要对事务的完整性要求比较高（比如银行），要求实现并发控制（比如售票），那选择InnoDB有很大的优势。如果需要频繁的更新、删除操作的数据库，也可以选择InnoDB，因为支持事务的提交（commit）和回滚（rollback）。 
 
@@ -581,17 +569,15 @@ MEMORY：所有的数据都在内存中，数据的处理速度快，但是安�
 
 
 
-60、计算代码运行结果，zip函数历史文章已经说了，得出[("a",1),("b",2)，("c",3),("d",4),("e",5)]
-
-![1](110_python_question/43.png)
-
-
-dict()创建字典新方法
+# 60、计算代码运行结果，zip函数历史文章已经说了，得出[("a",1),("b",2)，("c",3),("d",4),("e",5)]
 
 ![1](110_python_question/44.png)
 
+dict()创建字典新方法
 
-61、简述同源策略
+![1](110_python_question/45.png)
+
+# 61、简述同源策略
 
  同源策略需要同时满足以下三点要求： 
 
@@ -611,7 +597,7 @@ dict()创建字典新方法
 
 
 
-62、简述cookie和session的区别
+# 62、简述cookie和session的区别
 
 1，session 在服务器端，cookie 在客户端（浏览器）
 
@@ -621,7 +607,7 @@ dict()创建字典新方法
 
 
 
-63、简述多线程、多进程
+# 63、简述多线程、多进程
 
 进程：
 
@@ -647,7 +633,7 @@ CPU密集的用多进程，因为假如IO操作少，用多线程的话，因为
 
 
 
-64、简述any()和all()方法
+# 64、简述any()和all()方法
 
 any():只要迭代器中有一个元素为真就为真
 
@@ -657,13 +643,11 @@ python中什么元素为假？
 
 答案：（0，空字符串，空列表、空字典、空元组、None, False）
 
-![1](110_python_question/45.png)
-测试all()和any()方法
+![1](110_python_question/46.png)测试all()和any()方法
 
-![1](110_python_question/46.png)
+![1](110_python_question/47.png)
 
-
-65、IOError、AttributeError、ImportError、IndentationError、IndexError、KeyError、SyntaxError、NameError分别代表什么异常
+# 65、IOError、AttributeError、ImportError、IndentationError、IndexError、KeyError、SyntaxError、NameError分别代表什么异常
 
 IOError：输入输出异常
 
@@ -683,12 +667,11 @@ NameError:使用一个还未赋予对象的变量
 
 
 
-66、python中copy和deepcopy区别
+# 66、python中copy和deepcopy区别
 
 1、复制不可变数据类型，不管copy还是deepcopy,都是同一个地址当浅复制的值是不可变对象（数值，字符串，元组）时和=“赋值”的情况一样，对象的id值与浅复制原来的值相同。
 
-![1](110_python_question/47.png)
-
+![1](110_python_question/48.png)
 
 2、复制的值是可变对象（列表和字典）
 
@@ -702,13 +685,11 @@ NameError:使用一个还未赋予对象的变量
 
 
 
-![1](110_python_question/48.png)
-
-
 ![1](110_python_question/49.png)
 
+![1](110_python_question/50.png)
 
-67、列出几种魔法方法并简要介绍用途
+# 67、列出几种魔法方法并简要介绍用途
 
 __init__:对象初始化方法
 
@@ -720,14 +701,13 @@ __del__:删除对象执行的方法
 
 
 
-68、C:\Users\ry-wu.junya\Desktop>python 1.py 22 33命令行启动程序并传参，print(sys.argv)会输出什么数据？
+# 68、C:\Users\ry-wu.junya\Desktop>python 1.py 22 33命令行启动程序并传参，print(sys.argv)会输出什么数据？
 
 文件名和参数构成的列表
 
-![1](110_python_question/50.png)
+![1](110_python_question/51.png)
 
-
-69、请将[i for i in range(3)]改成生成器
+# 69、请将[i for i in range(3)]改成生成器
 
 生成器是特殊的迭代器，
 
@@ -737,111 +717,93 @@ __del__:删除对象执行的方法
 
 中括号换成小括号即可，有没有惊呆了
 
-![1](110_python_question/51.png)
-
-
-70、a = "  hehheh  ",去除收尾空格
-
 ![1](110_python_question/52.png)
 
-
-71、举例sort和sorted对列表排序，list=[0,-1,3,-10,5,9]
+# 70、a = "  hehheh  ",去除收尾空格
 
 ![1](110_python_question/53.png)
 
-
-72、对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4],使用lambda函数从小到大排序
+# 71、举例sort和sorted对列表排序，list=[0,-1,3,-10,5,9]
 
 ![1](110_python_question/54.png)
 
+# 72、对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4],使用lambda函数从小到大排序
 
-73、使用lambda函数对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4]，输出结果为
+![1](110_python_question/55.png)
+
+# 73、使用lambda函数对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4]，输出结果为
 
 [0,2,4,8,8,9,-2,-4,-4,-5,-20]，正数从小到大，负数从大到小
 
 （传两个条件，x<0和abs(x)）
 
-![1](110_python_question/55.png)
+![1](110_python_question/56.png)
 
-
-74、列表嵌套字典的排序，分别根据年龄和姓名排序
+# 74、列表嵌套字典的排序，分别根据年龄和姓名排序
 
 foo = [{"name":"zs","age":19},{"name":"ll","age":54},
 
         {"name":"wa","age":17},{"name":"df","age":23}]
 
-![1](110_python_question/56.png)
-
-
-75、列表嵌套元组，分别按字母和数字排序
-
 ![1](110_python_question/57.png)
 
-
-76、列表嵌套列表排序，年龄数字相同怎么办？
+# 75、列表嵌套元组，分别按字母和数字排序
 
 ![1](110_python_question/58.png)
 
-
-77、根据键对字典排序（方法一，zip函数）
+# 76、列表嵌套列表排序，年龄数字相同怎么办？
 
 ![1](110_python_question/59.png)
 
-
-78、根据键对字典排序（方法二,不用zip)
-
-有没有发现dic.items和zip(dic.keys(),dic.values())都是为了构造列表嵌套字典的结构，方便后面用sorted()构造排序规则
+# 77、根据键对字典排序（方法一，zip函数）
 
 ![1](110_python_question/60.png)
 
+# 78、根据键对字典排序（方法二,不用zip)
 
-79、列表推导式、字典推导式、生成器
+有没有发现dic.items和zip(dic.keys(),dic.values())都是为了构造列表嵌套字典的结构，方便后面用sorted()构造排序规则
 
 ![1](110_python_question/61.png)
 
-
-80、最后出一道检验题目，根据字符串长度排序，看排序是否灵活运用
+# 79、列表推导式、字典推导式、生成器
 
 ![1](110_python_question/62.png)
 
-
-81、举例说明SQL注入和解决办法
-
-当以字符串格式化书写方式的时候，如果用户输入的有;+SQL语句，后面的SQL语句会执行，比如例子中的SQL注入会删除数据库demo
+# 80、最后出一道检验题目，根据字符串长度排序，看排序是否灵活运用
 
 ![1](110_python_question/63.png)
 
+# 81、举例说明SQL注入和解决办法
 
-解决方式：通过传参数方式解决SQL注入
+当以字符串格式化书写方式的时候，如果用户输入的有;+SQL语句，后面的SQL语句会执行，比如例子中的SQL注入会删除数据库demo
 
 ![1](110_python_question/64.png)
 
-
-82、s="info:xiaoZhang 33 shandong",用正则切分字符串输出['info', 'xiaoZhang', '33', 'shandong']
-
-|表示或，根据冒号或者空格切分
+解决方式：通过传参数方式解决SQL注入
 
 ![1](110_python_question/65.png)
 
+# 82、s="info:xiaoZhang 33 shandong",用正则切分字符串输出['info', 'xiaoZhang', '33', 'shandong']
 
-83、正则匹配以163.com结尾的邮箱
+|表示或，根据冒号或者空格切分
 
 ![1](110_python_question/66.png)
 
-
-84、递归求和
+# 83、正则匹配以163.com结尾的邮箱
 
 ![1](110_python_question/67.png)
 
-
-85、python字典和json字符串相互转化方法
-
-json.dumps()字典转json字符串，json.loads()json转字典
+# 84、递归求和
 
 ![1](110_python_question/68.png)
 
+# 85、python字典和json字符串相互转化方法
 
-86、MyISAM 与 InnoDB 区别：
+json.dumps()字典转json字符串，json.loads()json转字典
+
+![1](110_python_question/69.png)
+
+# 86、MyISAM 与 InnoDB 区别：
 
 1、InnoDB 支持事务，MyISAM 不支持，这一点是非常之重要。事务是一种高
 
@@ -865,27 +827,23 @@ json.dumps()字典转json字符串，json.loads()json转字典
 
 
 
-87、统计字符串中某字符出现次数
-
-![1](110_python_question/69.png)
-
-
-88、字符串转化大小写
+# 87、统计字符串中某字符出现次数
 
 ![1](110_python_question/70.png)
 
-
-89、用两种方法去空格
+# 88、字符串转化大小写
 
 ![1](110_python_question/71.png)
 
-
-90、正则匹配不是以4和7结尾的手机号
+# 89、用两种方法去空格
 
 ![1](110_python_question/72.png)
 
+# 90、正则匹配不是以4和7结尾的手机号
 
-91、简述python引用计数机制
+![1](110_python_question/73.png)
+
+# 91、简述python引用计数机制
 
 python垃圾回收主要以引用计数为主，标记-清除和分代清除为辅的机制，其中标记-清除和分代回收主要是为了处理循环引用的难题。
 
@@ -894,16 +852,15 @@ python垃圾回收主要以引用计数为主，标记-清除和分代清除为�
 
 当使用del删除变量指向的对象时，如果对象的引用计数不为1，比如3，那么此时只会让这个引用计数减1，即变为2，当再次调用del时，变为1，如果再调用1次del，此时会真的把对象进行删除
 
-![1](110_python_question/73.png)
+![1](110_python_question/74.png)
 
-
-92、int("1.4"),int(1.4)输出结果？
+# 92、int("1.4"),int(1.4)输出结果？
 
 int("1.4")报错，int(1.4)输出1
 
 
 
-93、列举3条以上PEP8编码规范
+# 93、列举3条以上PEP8编码规范
 
 1、顶级定义之间空两行，比如函数或者类定义。
 
@@ -915,19 +872,17 @@ int("1.4")报错，int(1.4)输出1
 
 
 
-94、正则表达式匹配第一个URL
+# 94、正则表达式匹配第一个URL
 
 findall结果无需加group(),search需要加group()提取
 
-![1](110_python_question/74.png)
-
-
-95、正则匹配中文
-
 ![1](110_python_question/75.png)
 
+# 95、正则匹配中文
 
-96、简述乐观锁和悲观锁
+![1](110_python_question/76.png)
+
+# 96、简述乐观锁和悲观锁
 
 悲观锁, 就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到锁。传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。
 
@@ -937,14 +892,13 @@ findall结果无需加group(),search需要加group()提取
 
 
 
-97、r、r+、rb、rb+文件打开模式区别
+# 97、r、r+、rb、rb+文件打开模式区别
 
 模式较多，比较下背背记记即可
 
-![1](110_python_question/76.png)
+![1](110_python_question/77.png)
 
-
-98、Linux命令重定向 > 和 >>
+# 98、Linux命令重定向 > 和 >>
 
 Linux 允许将命令执行结果 重定向到一个 文件
 
@@ -960,31 +914,27 @@ Linux 允许将命令执行结果 重定向到一个 文件
 将 tree 输出的信息追加到 1.txt 文件的末尾tree >> 1.txt
 
 
-99、正则表达式匹配出<html><h1>www.itcast.cn</h1></html>
+# 99、正则表达式匹配出<html><h1>www.itcast.cn</h1></html>
 
 前面的<>和后面的<>是对应的，可以用此方法
 
-![1](110_python_question/77.png)
-
+![1](110_python_question/78.png)
 
 100、python传参数是传值还是传址？
 
 Python中函数参数是引用传递（注意不是值传递）。对于不可变类型（数值型、字符串、元组），因变量不能修改，所以运算不会影响到变量自身；而对于可变类型（列表字典）来说，函数体运算可能会更改传入的参数变量。
 
-![1](110_python_question/78.png)
-
+![1](110_python_question/79.png)
 
 101、求两个列表的交集、差集、并集
 
-![1](110_python_question/79.png)
-
+![1](110_python_question/80.png)
 
 102、生成0-100的随机数
 
 random.random()生成0-1之间的随机小数，所以乘以100
 
-![1](110_python_question/80.png)
-
+![1](110_python_question/81.png)
 
 103、lambda匿名函数好处
 
@@ -992,8 +942,7 @@ random.random()生成0-1之间的随机小数，所以乘以100
 
 精简代码，lambda省去了定义函数，map省去了写for循环过程
 
-![1](110_python_question/81.png)
-
+![1](110_python_question/82.png)
 
 104、常见的网络传输协议
 
@@ -1036,8 +985,7 @@ python垃圾回收主要以引用计数为主，标记-清除和分代清除为�
 
 当使用del删除变量指向的对象时，如果对象的引用计数不为1，比如3，那么此时只会让这个引用计数减1，即变为2，当再次调用del时，变为1，如果再调用1次del，此时会真的把对象进行删除
 
-![1](110_python_question/82.png)
-
+![1](110_python_question/83.png)
 
 107、HTTP请求中get和post区别
 
@@ -1053,8 +1001,7 @@ python垃圾回收主要以引用计数为主，标记-清除和分代清除为�
 
 应用数据分析库pandas
 
-![1](110_python_question/83.png)
-
+![1](110_python_question/84.png)
 
 109、简述多线程、多进程
 
@@ -1084,4 +1031,4 @@ CPU密集的用多进程，因为假如IO操作少，用多线程的话，因为
 
 110、python正则中search和match
 
-![1](110_python_question/84.png)
+![1](110_python_question/85.png)
