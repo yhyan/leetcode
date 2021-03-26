@@ -1032,3 +1032,7 @@ CPU密集的用多进程，因为假如IO操作少，用多线程的话，因为
 110、python正则中search和match
 
 ![1](110_python_question/85.png)
+
+
+done.
+
