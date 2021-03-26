@@ -2,14 +2,14 @@
 
 利用sum()函数求和
 
-![1](0.png)
+![1](110_python_question/0.png)
 
 
 2、如何在一个函数内部修改全局变量
 
 函数内部global声明 修改全局变量
 
-![1](1.png))
+![1](110_python_question/1.png)
 
 
 
