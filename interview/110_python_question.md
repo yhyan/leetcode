@@ -31,8 +31,7 @@ datetime:处理日期时间
 
 del和update方法
 
-Image
-
+![1](110_python_question/2.png)
 
 
 5、谈下python的GIL
@@ -49,16 +48,13 @@ GIL 是python的全局解释器锁，同一进程中假如有多个线程运行�
 
 先通过集合去重，在转列表
 
-Image
-
+![1](110_python_question/3.png)
 
 
 7、fun(*args,**kwargs)中的*args,**kwargs什么意思？
 
-Image
-
-Image
-
+![1](110_python_question/4.png)
+![1](110_python_question/5.png)
 
 
 8、python2和python3的range（100）的区别
@@ -93,8 +89,7 @@ python2返回列表，python3返回迭代器，节约内存
 
 __init__是初始化方法，创建对象后，就立刻被默认调用了，可接收参数，如图
 
-Image
-
+![1](110_python_question/6.png)
 
 
 1、__new__至少要有一个参数cls，代表当前类，此参数在实例化时由Python解释器自动识别
@@ -105,14 +100,12 @@ Image
 
 4、如果__new__创建的是当前类的实例，会自动调用__init__函数，通过return语句里面调用的__new__函数的第一个参数是cls来保证是当前类实例，如果是其他类的类名，；那么实际创建返回的就是其他类的实例，其实就不会调用当前类的__init__函数，也不会调用其他类的__init__函数。
 
-Image
-
+![1](110_python_question/7.png)
 
 
 12、简述with方法打开处理文件帮我我们做了什么？
 
-Image
-
+![1](110_python_question/8.png)
 打开文件在进行读写的时候可能会出现一些异常状况，如果按照常规的f.open
 
 写法，我们需要try,except,finally，做异常判断，并且文件最终不管遇到什么情况，都要执行finally f.close()关闭文件，with方法帮我们实现了finally中f.close
@@ -135,8 +128,7 @@ map（）函数第一个参数是fun，第二个参数是一般是list，第三�
 
 0-1随机小数：random.random(),括号中不传参
 
-Image
-
+![1](110_python_question/9.png)
 
 
 15、避免转义给字符串加哪个字母表示原始字符串？
@@ -147,16 +139,14 @@ r , 表示需要原始字符串，不转义特殊字符
 
 16、<div class="nam">中国</div>，用正则匹配出标签里面的内容（“中国”），其中class的类名是不确定的
 
-Image
-
+![1](110_python_question/10.png)
 
 
 17、python中断言方法举例
 
 assert（）方法，断言成功，则程序继续执行，断言失败，则程序报错
 
-Image
-
+![1](110_python_question/11.png)
 
 
 18、数据表student有id,name,score,city字段，其中name中的名字可有重复，需要消除重复行,请写sql语句
@@ -199,16 +189,14 @@ Python2 既可以使用带小括号的方式，也可以使用一个空格来分
 
 不允许变量的值发生变化，如果改变了变量的值，相当于是新建了一个对象，而对于相同的值的对象，在内存中则只有一个对象（一个地址），如下图用id()方法可以打印对象的id
 
-Image
-
+![1](110_python_question/12.png)
 
 
 可变数据类型：列表list和字典dict；
 
 允许变量的值发生变化，即如果对变量进行append、+=等这种操作后，只是改变了变量的值，而不会新建一个对象，变量引用的对象的地址也不会变化，不过对于相同的值的不同对象，在内存中则会存在不同的对象，即每个对象都有自己的地址，相当于内存中对于同值的对象保存了多份，这里不存在引用计数，是实实在在的对象。
 
-Image
-
+![1](110_python_question/13.png)
 
 
 22、s = "ajldjlajfdljfddd"，去重并从小到大排序输出"adfjl"
@@ -217,54 +205,46 @@ set去重，去重转成list,利用sort方法排序，reeverse=False是从小到
 
 list是不 变数据类型，s.sort时候没有返回值，所以注释的代码写法不正确
 
-Image
-
+![1](110_python_question/14.png)
 
 
 23、用lambda函数实现两个数相乘
 
-Image
-
+![1](110_python_question/15.png)
 
 
 24、字典根据键从小到大排序
 
 dic={"name":"zs","age":18,"city":"深圳","tel":"1362626627"}
 
-Image
-
+![1](110_python_question/16.png)
 
 
 25、利用collections库的Counter方法统计字符串每个单词出现的次数"kjalfj;ldsjafl;hdsllfdhg;lahfbl;hl;ahlf;h"
 
-Image
-
+![1](110_python_question/17.png)
 
 
 26、字符串a = "not 404 found 张三 99 深圳"，每个词中间是空格，用正则过滤掉英文和数字，最终输出"张三  深圳"
 
-Image
-
+![1](110_python_question/18.png)
 
 
 顺便贴上匹配小数的代码，虽然能匹配，但是健壮性有待进一步确认
 
-Image
-
+![1](110_python_question/19.png)
 
 
 27、filter方法求出列表所有奇数并构造新列表，a =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 filter() 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。该接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表
 
-Image
-
+![1](110_python_question/20.png)
 
 
 28、列表推导式求列表所有奇数并构造新列表，a =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-Image
-
+![1](110_python_question/21.png)
 
 
 29、正则re.complie作用
@@ -275,8 +255,7 @@ re.compile是将正则表达式编译成一个对象，加快速度，并重复�
 
 30、a=（1，）b=(1)，c=("1") 分别是什么类型的数据？
 
-Image
-
+![1](110_python_question/22.png)
 
 
 
@@ -285,8 +264,7 @@ Image
 
 extend可以将另一个集合中的元素逐一添加到列表中，区别于append整体添加
 
-Image
-
+![1](110_python_question/23.png)
 
 
 32、用python删除文件和用linux命令删除文件方法
@@ -301,8 +279,7 @@ linux:       rm  文件名
 
 顺便把星期的代码也贴上了
 
-Image
-
+![1](110_python_question/24.png)
 
 
 34、数据库优化查询方法
@@ -321,8 +298,7 @@ pychart、matplotlib
 
 自定义异常用raise抛出异常
 
-Image
-
+![1](110_python_question/25.png)
 
 
 37、正则表达式匹配中，（.*）和（.*?）匹配区别？
@@ -331,8 +307,7 @@ Image
 
 （.*?）是非贪婪匹配，会把满足正则的尽可能少匹配
 
-Image
-
+![1](110_python_question/26.png)
 
 
 38、简述Django的orm
@@ -341,8 +316,7 @@ ORM，全拼Object-Relation Mapping，意为对象-关系映射
 
 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松更换数据库，而不需要修改代码只需要面向对象编程,orm操作本质上会根据对接的数据库引擎，翻译成对应的sql语句,所有使用Django开发的项目无需关心程序底层使用的是MySQL、Oracle、sqlite....，如果数据库迁移，只需要更换Django的数据库引擎即可
 
-Image
-
+![1](110_python_question/27.png)
 
 
 39、[[1,2],[3,4],[5,6]]一行代码展开该列表，得出[1,2,3,4,5,6]
@@ -351,14 +325,12 @@ Image
 
 运行过程：for i in a ,每个i是【1,2】，【3,4】，【5,6】，for j in i，每个j就是1,2,3,4,5,6,合并后就是结果
 
-Image
-
+![1](110_python_question/28.png)
 
 
 还有更骚的方法，将列表转成numpy矩阵，通过numpy的flatten（）方法，代码永远是只有更骚，没有最骚ImageImageImage
 
-Image
-
+![1](110_python_question/29.png)
 
 
 40、x="abc",y="def",z=["d","e","f"],分别求出x.join(y)和x.join(z)返回的结果
@@ -367,8 +339,7 @@ join()括号里面的是可迭代对象，x插入可迭代对象中间，形成�
 
 顺便建议大家学下os.path.join()方法，拼接路径经常用到，也用到了join,和字符串操作中的join有什么区别，该问题大家可以查阅相关文档，后期会有答案
 
-Image
-
+![1](110_python_question/30.png)
 
 
 41、举例说明异常模块中try except else finally的相关意义
@@ -377,14 +348,12 @@ try..except..else没有捕获到异常，执行else语句
 
 try..except..finally不管是否捕获到异常，都执行finally语句
 
-Image
-
+![1](110_python_question/31.png)
 
 
 42、python中交换两个数值
 
-Image
-
+![1](110_python_question/32.png)
 
 
 43、举例说明zip（）函数用法
@@ -393,14 +362,12 @@ zip()函数在运算时，会以一个或多个序列（可迭代对象）做为
 
 zip()参数可以接受任何类型的序列，同时也可以有两个以上的参数;当传入参数的长度不同时，zip能自动以最短序列长度为准进行截取，获得元组。
 
-Image
-
+![1](110_python_question/33.png)
 
 
 44、a="张明 98分"，用re.sub，将98替换为100
 
-Image
-
+![1](110_python_question/34.png)
 
 
 45、写5条常用sql语句
@@ -421,16 +388,14 @@ update students set gender=0,hometown="北京" where id=5
 
 46、a="hello"和b="你好"编码成bytes类型
 
-Image
-
+![1](110_python_question/35.png)
 
 
 47、[1,2,3]+[4,5,6]的结果是多少？
 
 两个列表相加，等价于extend
 
-Image
-
+![1](110_python_question/36.png)
 
 
 48、提高python运行效率的方法
@@ -473,32 +438,28 @@ url='https://sycm.taobao.com/bda/tradinganaly/overview/get_summary.json?dateRang
 
 仍有同学问正则，其实匹配并不难，提取一段特征语句，用（.*?）匹配即可
 
-Image
-
+![1](110_python_question/37.png)
 
 
 52、list=[2,3,5,4,9,6]，从小到大排序，不许用sort，输出[2,3,4,5,6,9]
 
 利用min()方法求出最小值，原列表删除最小值，新列表加入最小值，递归调用获取最小值的函数，反复操作
 
-Image
-
+![1](110_python_question/38.png)
 
 
 53、写一个单列模式
 
 因为创建对象时__new__方法执行，并且必须return 返回实例化出来的对象所cls.__instance是否存在，不存在的话就创建对象，存在的话就返回该对象，来保证只有一个实例对象存在（单列），打印ID，值一样，说明对象同一个
 
-Image
-
+![1](110_python_question/39.png)
 
 
 54、保留两位小数
 
 题目本身只有a="%.03f"%1.3335,让计算a的结果，为了扩充保留小数的思路，提供round方法（数值，保留位数）
 
-Image
-
+![1](110_python_question/40.png)
 
 
 55、求三个方法打印结果
@@ -509,8 +470,7 @@ fn("two",2)因为字典在内存中是可变数据类型，所以指向同一个
 
 fn("three",3,{})因为传了一个新字典，所以不再是原先默认参数的字典
 
-Image
-
+![1](110_python_question/41.png)
 
 
 56、列出常见的状态码和意义
@@ -605,8 +565,7 @@ GET范围请求已成功处理
 
 58、使用pop和del删除字典中的"name"字段，dic={"name":"zs","age":18}
 
-Image
-
+![1](110_python_question/42.png)
 
 
 59、列出常见MYSQL数据存储引擎
@@ -621,14 +580,12 @@ MEMORY：所有的数据都在内存中，数据的处理速度快，但是安�
 
 60、计算代码运行结果，zip函数历史文章已经说了，得出[("a",1),("b",2)，("c",3),("d",4),("e",5)]
 
-Image
-
+![1](110_python_question/43.png)
 
 
 dict()创建字典新方法
 
-Image
-
+![1](110_python_question/44.png)
 
 
 61、简述同源策略
@@ -697,12 +654,10 @@ python中什么元素为假？
 
 答案：（0，空字符串，空列表、空字典、空元组、None, False）
 
-Image
-
+![1](110_python_question/45.png)
 测试all()和any()方法
 
-Image
-
+![1](110_python_question/46.png)
 
 
 65、IOError、AttributeError、ImportError、IndentationError、IndexError、KeyError、SyntaxError、NameError分别代表什么异常
@@ -729,8 +684,7 @@ NameError:使用一个还未赋予对象的变量
 
 1、复制不可变数据类型，不管copy还是deepcopy,都是同一个地址当浅复制的值是不可变对象（数值，字符串，元组）时和=“赋值”的情况一样，对象的id值与浅复制原来的值相同。
 
-Image
-
+![1](110_python_question/47.png)
 
 
 2、复制的值是可变对象（列表和字典）
@@ -745,12 +699,10 @@ Image
 
 
 
-Image
+![1](110_python_question/48.png)
 
 
-
-Image
-
+![1](110_python_question/49.png)
 
 
 67、列出几种魔法方法并简要介绍用途
@@ -769,8 +721,7 @@ __del__:删除对象执行的方法
 
 文件名和参数构成的列表
 
-Image
-
+![1](110_python_question/50.png)
 
 
 69、请将[i for i in range(3)]改成生成器
@@ -783,26 +734,22 @@ Image
 
 中括号换成小括号即可，有没有惊呆了ImageImageImage
 
-Image
-
+![1](110_python_question/51.png)
 
 
 70、a = "  hehheh  ",去除收尾空格
 
-Image
-
+![1](110_python_question/52.png)
 
 
 71、举例sort和sorted对列表排序，list=[0,-1,3,-10,5,9]
 
-Image
-
+![1](110_python_question/53.png)
 
 
 72、对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4],使用lambda函数从小到大排序
 
-Image
-
+![1](110_python_question/54.png)
 
 
 73、使用lambda函数对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4]，输出结果为
@@ -811,8 +758,7 @@ Image
 
 （传两个条件，x<0和abs(x)）
 
-Image
-
+![1](110_python_question/55.png)
 
 
 74、列表嵌套字典的排序，分别根据年龄和姓名排序
@@ -821,88 +767,75 @@ foo = [{"name":"zs","age":19},{"name":"ll","age":54},
 
         {"name":"wa","age":17},{"name":"df","age":23}]
 
-Image
-
+![1](110_python_question/56.png)
 
 
 75、列表嵌套元组，分别按字母和数字排序
 
-Image
-
+![1](110_python_question/57.png)
 
 
 76、列表嵌套列表排序，年龄数字相同怎么办？
 
-Image
-
+![1](110_python_question/58.png)
 
 
 77、根据键对字典排序（方法一，zip函数）
 
-Image
-
+![1](110_python_question/59.png)
 
 
 78、根据键对字典排序（方法二,不用zip)
 
 有没有发现dic.items和zip(dic.keys(),dic.values())都是为了构造列表嵌套字典的结构，方便后面用sorted()构造排序规则
 
-Image
-
+![1](110_python_question/60.png)
 
 
 79、列表推导式、字典推导式、生成器
 
-Image
-
+![1](110_python_question/61.png)
 
 
 80、最后出一道检验题目，根据字符串长度排序，看排序是否灵活运用
 
-Image
-
+![1](110_python_question/62.png)
 
 
 81、举例说明SQL注入和解决办法
 
 当以字符串格式化书写方式的时候，如果用户输入的有;+SQL语句，后面的SQL语句会执行，比如例子中的SQL注入会删除数据库demo
 
-Image
-
+![1](110_python_question/63.png)
 
 
 解决方式：通过传参数方式解决SQL注入
 
-Image
-
+![1](110_python_question/64.png)
 
 
 82、s="info:xiaoZhang 33 shandong",用正则切分字符串输出['info', 'xiaoZhang', '33', 'shandong']
 
 |表示或，根据冒号或者空格切分
 
-Image
-
+![1](110_python_question/65.png)
 
 
 83、正则匹配以163.com结尾的邮箱
 
-Image
-
+![1](110_python_question/66.png)
 
 
 84、递归求和
 
-Image
-
+![1](110_python_question/67.png)
 
 
 85、python字典和json字符串相互转化方法
 
 json.dumps()字典转json字符串，json.loads()json转字典
 
-Image
-
+![1](110_python_question/68.png)
 
 
 86、MyISAM 与 InnoDB 区别：
@@ -931,26 +864,22 @@ Image
 
 87、统计字符串中某字符出现次数
 
-Image
-
+![1](110_python_question/69.png)
 
 
 88、字符串转化大小写
 
-Image
-
+![1](110_python_question/70.png)
 
 
 89、用两种方法去空格
 
-Image
-
+![1](110_python_question/71.png)
 
 
 90、正则匹配不是以4和7结尾的手机号
 
-Image
-
+![1](110_python_question/72.png)
 
 
 91、简述python引用计数机制
@@ -962,8 +891,7 @@ python垃圾回收主要以引用计数为主，标记-清除和分代清除为�
 
 当使用del删除变量指向的对象时，如果对象的引用计数不为1，比如3，那么此时只会让这个引用计数减1，即变为2，当再次调用del时，变为1，如果再调用1次del，此时会真的把对象进行删除
 
-Image
-
+![1](110_python_question/73.png)
 
 
 92、int("1.4"),int(1.4)输出结果？
@@ -988,14 +916,12 @@ int("1.4")报错，int(1.4)输出1
 
 findall结果无需加group(),search需要加group()提取
 
-Image
-
+![1](110_python_question/74.png)
 
 
 95、正则匹配中文
 
-Image
-
+![1](110_python_question/75.png)
 
 
 96、简述乐观锁和悲观锁
@@ -1012,8 +938,7 @@ Image
 
 模式较多，比较下背背记记即可
 
-Image
-
+![1](110_python_question/76.png)
 
 
 98、Linux命令重定向 > 和 >>
@@ -1036,30 +961,26 @@ Linux 允许将命令执行结果 重定向到一个 文件
 
 前面的<>和后面的<>是对应的，可以用此方法
 
-Image
-
+![1](110_python_question/77.png)
 
 
 100、python传参数是传值还是传址？
 
 Python中函数参数是引用传递（注意不是值传递）。对于不可变类型（数值型、字符串、元组），因变量不能修改，所以运算不会影响到变量自身；而对于可变类型（列表字典）来说，函数体运算可能会更改传入的参数变量。
 
-Image
-
+![1](110_python_question/78.png)
 
 
 101、求两个列表的交集、差集、并集
 
-Image
-
+![1](110_python_question/79.png)
 
 
 102、生成0-100的随机数
 
 random.random()生成0-1之间的随机小数，所以乘以100
 
-Image
-
+![1](110_python_question/80.png)
 
 
 103、lambda匿名函数好处
@@ -1068,8 +989,7 @@ Image
 
 精简代码，lambda省去了定义函数，map省去了写for循环过程
 
-Image
-
+![1](110_python_question/81.png)
 
 
 104、常见的网络传输协议
@@ -1113,8 +1033,7 @@ python垃圾回收主要以引用计数为主，标记-清除和分代清除为�
 
 当使用del删除变量指向的对象时，如果对象的引用计数不为1，比如3，那么此时只会让这个引用计数减1，即变为2，当再次调用del时，变为1，如果再调用1次del，此时会真的把对象进行删除
 
-Image
-
+![1](110_python_question/82.png)
 
 
 107、HTTP请求中get和post区别
@@ -1131,8 +1050,7 @@ Image
 
 应用数据分析库pandas
 
-Image
-
+![1](110_python_question/83.png)
 
 
 109、简述多线程、多进程
@@ -1163,4 +1081,4 @@ CPU密集的用多进程，因为假如IO操作少，用多线程的话，因为
 
 110、python正则中search和match
 
-Image
+![1](110_python_question/84.png)
