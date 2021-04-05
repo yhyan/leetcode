@@ -16,7 +16,7 @@
 
 例 2 设有 8 个元素 { a,b,c,d,e,f,g,h } ，采用某种哈希函数得到的地址分别为： {0 ， 2 ， 4 ， 1 ， 0 ， 8 ， 7 ， 2} ，当哈希表长度为 10 时，采用链地址法解决冲突的哈希表如下图所示：
 
-![hash](https://github.com/HIT-Alibaba/interview/blob/master/img/hash-table.jpg?raw=true)
+![hash](hash-table.jpg)
 
 ### 参考资料
 
