@@ -34,7 +34,7 @@
 
 三次握手的过程的示意图如下：
 
-![three-way-handshake](https://raw.githubusercontent.com/HIT-Alibaba/interview/master/img/tcp-connection-made-three-way-handshake.png)
+![tcp-connection-made-three-way-handshake.png)
 
 TCP 的连接的拆除需要发送四个包，因此称为四次挥手(Four-way handshake)，也叫做改进的三次握手。客户端或服务器均可主动发起挥手动作，在 socket 编程中，任何一方执行 `close()` 操作即可产生挥手操作。
 
@@ -66,7 +66,7 @@ TCP 的连接的拆除需要发送四个包，因此称为四次挥手(Four-way 
         
 四次挥手的示意图如下：
 
-![four-way-handshake](https://raw.githubusercontent.com/HIT-Alibaba/interview/master/img/tcp-connection-closed-four-way-handshake.png)
+![four-way-handshake](tcp-connection-closed-four-way-handshake.png)
 
 ## SYN攻击
 
