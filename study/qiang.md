@@ -9,6 +9,18 @@ $ sslocal -s server_address -p server_port -k password -m method
 
 ```
 
+查看 shadowsocks deb 的文件内容：
+
+```
+$ mkdir /tmp/ss
+$ cd /tmp/ss
+$ cp /var/cache/apt/archives/shadowsocks_2.1.0-1_all.deb .
+$ dpkg -L shadowsocks
+```
+
+可以看到，实际上就是 [shadowsocks python代码](https://github.com/shadowsocks/shadowsocks/tree/master)
+
+
 
 ### 安装 anaconda.sh
 
