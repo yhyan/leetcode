@@ -9,7 +9,13 @@ $ sslocal -s server_address -p server_port -k password -m method
 
 ```
 
+
+### 安装 anaconda.sh
+
+
 ### 安装firefox插件
+
+
 
 
 
