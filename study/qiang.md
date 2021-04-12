@@ -47,3 +47,12 @@ Port: 1080
 然后将此profile命名，如ss。
 
 在Firefox的工具栏，点击代表SwitchyOmega的小圆圈，选择ss。
+
+
+# git 配置proxy
+
+```
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+
