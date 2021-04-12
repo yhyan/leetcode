@@ -20,7 +20,7 @@ $ dpkg -L shadowsocks
 
 可以看到，实际上就是 [shadowsocks python代码](https://github.com/shadowsocks/shadowsocks/tree/master)
 
-
+shadowsocks 源码可以查看 [这里](http://lxr.yanyahua.com/source/shadowsocks)
 
 ### 安装 anaconda.sh
 
