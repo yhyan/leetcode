@@ -16,13 +16,34 @@ $ sslocal -s server_address -p server_port -k password -m method
 
 ### 在supervisor中配置 sslocal 开机启动
 
+```
+/etc/supervisor/conf.d$ cat shadowsocks.conf
+[program:shadowsocks]
+command=/usr/bin/sslocal -c /home/XX/shadowsocks.json
+autostart=true
+autorestart=true
+user=XX
+log_stderr=true
+logfile=/tmp/supervisord_shadowsocks.log
+
+```
+
+
+
 ### 安装firefox插件
 
+打开Firefox浏览器，输入about:addons，进入插件安装页面。
 
+搜索Proxy SwitchyOmega，安装它。
 
+在Proxy SwitchyOmega的属性页面，新建profile，填写以下内容：
 
+```
+Protocol: SOCK5
+Server: 127.0.0.1
+Port: 1080
+```
 
+然后将此profile命名，如ss。
 
-
-
-
+在Firefox的工具栏，点击代表SwitchyOmega的小圆圈，选择ss。
